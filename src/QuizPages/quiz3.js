@@ -1,7 +1,7 @@
 import React from 'react'
 import * as Survey from 'survey-react'
 
-const Quiz = () => {
+const Quiz3 = () => {
     var json = {
         "pages": [
          {
@@ -76,4 +76,4 @@ const Quiz = () => {
     )
 }
 
-export default Quiz
+export default Quiz3
