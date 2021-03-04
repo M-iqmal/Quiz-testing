@@ -1,7 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import * as Survey from 'survey-react'
+import {Link} from 'react-router-dom'
 
 const Quiz1 = () => {
+    
+    const [fin, setFin] = useState(false)
+    
+    const doOnComplete = (survey) => {
+        alert("The results are:" + JSON.stringify(survey.data));
+        setFin(true)
+    }
+
     var json = {
         "pages": [
          {
@@ -39,9 +48,17 @@ const Quiz1 = () => {
 
     
     return (
+        fin ? (
+        <div>
+            <h1>Custom Thank You</h1>
+            <Link to="/">Home</Link>
+        </div>
+        ):(
        <Survey.Survey
         json={json}
+        onComplete = {doOnComplete}
         />
+        )
     )
 }
 
