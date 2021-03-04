@@ -81,7 +81,7 @@ const Quiz3 = () => {
     return (
         fin ? (
             <div>
-                <h1>Custom Thank You</h1>
+                <h2>Thank You For Finishing This Survey :)</h2>
                 <Link to="/">Home</Link>
             </div>
         ):(
