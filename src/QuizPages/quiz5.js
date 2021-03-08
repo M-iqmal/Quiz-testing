@@ -7,7 +7,6 @@ const Quiz5 = () => {
     const [fin, setFin] = useState(false)
     
     const doOnComplete = (survey) => {
-        alert("The results are:" + JSON.stringify(survey.data));
         setFin(true)
     }
 
