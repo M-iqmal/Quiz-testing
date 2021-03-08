@@ -11,16 +11,6 @@ const Quiz1 = () => {
         setFin(true)
     }
 
-    const finisedQuiz = (survey) =>{
-    survey
-    .onComplete
-    .add(function (result) {
-        document
-            .querySelector('#surveyResult')
-            .textContent = "Result JSON:\n" + JSON.stringify(result.data, null, 3);
-    });
-    <Link to= "/">Home</Link>
-    }
 
     var json = {
         "pages": [
@@ -60,13 +50,15 @@ const Quiz1 = () => {
     
     return (
         fin ? (
-        <Survey.Survey
-        finisedPage = {finisedQuiz}
-        />
+        <div>
+            <h2>Thank You For Finishing This Survey :)</h2>
+            <Link to="/">Home</Link>
+        </div>
         ):(
        <Survey.Survey
         json={json}
         onComplete = {doOnComplete}
+        showPreviewBeforeComplete = 'showAnsweredQuestions'
         />
         )
     )

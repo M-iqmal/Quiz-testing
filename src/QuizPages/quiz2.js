@@ -67,6 +67,7 @@ const Quiz2 = () => {
         <Survey.Survey
         json={json}
         onComplete = {doOnComplete}
+        showPreviewBeforeComplete = 'showAnsweredQuestions'
         />
         )
     )
